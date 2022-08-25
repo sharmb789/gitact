@@ -1,4 +1,4 @@
-FROM redhat/ubi8:latest
+FROM redhat/ubi8
 
 RUN subscription-manager register --username=kempas01 --password=BlackPearl@098 \
 && subscription-manager attach --auto \
