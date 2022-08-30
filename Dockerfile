@@ -14,10 +14,3 @@ RUN subscription-manager register --username=kempas01 --password=BlackPearl@098 
     ln -s /opt/R/${R_VERSION}/bin/Rscript /usr/local/bin/Rscript && \
     ln -s /opt/R/${R_VERSION}/bin/R /usr/local/bin/${R_VERSION}
 
-COPY Makevars /opt/R/${R_VERSION}/lib/R/etc/Makevars
-COPY Makevars /opt/R/${R_VERSION}/lib64/R/etc/Makevars
-
-ENV R_MAKEVARS_SITE=/opt/R/${R_VERSION}/lib/R/etc/Makevars
-
-COPY Renviron /opt/R/${R_VERSION}/lib/R/etc/Renviron
-COPY Renviron /opt/R/${R_VERSION}/lib64/R/etc/Renviron
