@@ -28,9 +28,10 @@ jobs:
         run: |
           cat Setup.env >> $GITHUB_ENV
       -
-        name: Update Dockerfile
+        name: Update R version
         run: |
-          sed -i -e "s#GIT_R_VERSION#${{ env.R_VERSION }}#" Dockerfile   
+          sed -i -e "s#GIT_R_VERSION#${{ env.R_VERSION }}#" Dockerfile  
+          sed -i -e "s#GIT_R_VERSION#${{ env.R_VERSION }}#" pkgr.yml
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
