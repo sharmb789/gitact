@@ -1,7 +1,8 @@
 Version: 1
 # top level packages
 Packages:
-  - rstan
+  - abind
+  - BH
 #  - tidyverse
 #  - shiny
 
@@ -15,5 +16,5 @@ Library: "/opt/R/4.1.1/lib/R/library"
 # package specific customizations
 Customizations:
   Packages:
-    - shiny:
+    - BH:
         Binary: true
