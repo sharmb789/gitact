@@ -24,6 +24,14 @@ jobs:
         name: Checkout
         uses: actions/checkout@v3
       -
+        name: Set environment
+        run: |
+          cat Setup.env >> $GITHUB_ENV
+      -
+        name: Update Dockerfile
+        run: |
+          sed -i -e "s#GIT_R_VERSION#${{ env.R_VERSION }}#" Dockerfile   
+      -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       -
