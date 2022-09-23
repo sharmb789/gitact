@@ -1,0 +1,19 @@
+Version: 1
+# top level packages
+Packages:
+  - rstan
+#  - tidyverse
+#  - shiny
+
+# any repositories, order matters
+Repos:
+  - CRAN: "https://cran.rstudio.com"
+
+# path to install packages to
+Library: "/opt/R/4.1.1/lib/R/library"
+
+# package specific customizations
+Customizations:
+  Packages:
+    - shiny:
+        Binary: true
